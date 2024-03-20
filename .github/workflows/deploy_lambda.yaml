@@ -1,5 +1,4 @@
-name: Deploy Lambda 
- 
+name: Deploy lambda 
  
 on:
   push:
@@ -35,7 +34,6 @@ jobs:
       run: |
         aws s3 cp authorizer.zip s3://g73-techchallenge-lambda-build
     
-
     - name: Deploy to AWS Lambda
       run: |
         aws lambda update-function-code --function-name authorizer \
